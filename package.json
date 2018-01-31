@@ -1,0 +1,27 @@
+{
+  "name": "express-routes-lab",
+  "version": "1.0.0",
+  "description": "ExpressJS Routes API Lab",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/przekwas/express-routes-lab.git"
+  },
+  "keywords": [
+    "Luke",
+    "rules"
+  ],
+  "author": "Tuna No Crust",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/przekwas/express-routes-lab/issues"
+  },
+  "homepage": "https://github.com/przekwas/express-routes-lab#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2"
+  }
+}
