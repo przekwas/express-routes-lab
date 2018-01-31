@@ -14,7 +14,7 @@ router.get('/:id?', (req, res) => {
 
 router.post('/', (req, res) => {
     chirpStore.CreateChirp(req.body);
-    res.sendStatus(200);
+    res.redirect('/');
 });
 
 router.put('/:id', (req, res) => {

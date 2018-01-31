@@ -16,10 +16,25 @@
 <body>
 
     <div class="container">
+        <!-- Form to post new chirps -->
+        <form class="border rounded border-dark bg-white p-1" action="/api/chirps/" method="POST">
+            <div class="form-row m-1">
+                <div class="col-3">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name">
+                </div>
+                <div class="col-9">
+                    <input type="text" class="form-control" name="text" placeholder="Chirp Message">
+                </div>
+            </div>
+            <div class="form-row m-1">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100 my-2">Post a Chirp!</button>
+                </div>
+            </div>
+        </form>
 
-        <div id="chirps-div">
-            
-        </div>
+        <!-- Div to show all chirps -->
+        <div id="chirps-div"></div>
 
     </div>
 
