@@ -16,32 +16,59 @@
 <body>
 
     <div class="container">
+
         <!-- Form to post new chirps -->
-        <form class="border rounded border-dark bg-white p-1" action="/api/chirps/" method="POST">
+        <form class="border rounded border-dark bg-white p-1">
             <div class="form-row m-1">
                 <div class="col-3">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name">
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
                 </div>
                 <div class="col-9">
-                    <input type="text" class="form-control" name="text" placeholder="Chirp Message">
+                    <input type="text" class="form-control" id="text" placeholder="Chirp Message">
                 </div>
             </div>
             <div class="form-row m-1">
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary w-100 my-2">Post a Chirp!</button>
+                    
                 </div>
             </div>
         </form>
+        <button onclick="chirp_post()" class="btn btn-primary w-100 my-2">Post a Chirp!</button>
 
         <!-- Div to show all chirps -->
         <div id="chirps-div"></div>
-
     </div>
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="Change a Chirp?" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit this Chirp</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Edit Text:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="change-button btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript Dependencies -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
